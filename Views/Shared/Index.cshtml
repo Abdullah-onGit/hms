@@ -1,0 +1,37 @@
+﻿@using System.Data
+@model System.Data.DataTable
+@{
+    ViewData["Title"] = "Index";
+    var hmsViewBag = ViewBag.hmsViewBag as hmsViewBag;
+}
+
+<link rel="stylesheet" type="text/css" href="~/lib/DataTables/datatables.min.css"/>
+ 
+<script type="text/javascript" src="~/lib/DataTables/datatables.min.js"></script>
+<a href="/@hmsViewBag.controllerName/AddEdit/0" class="btn">Add</a>
+    <table id="IndexTable" class="table table-condensed table-bordered table-striped">
+        <thead>
+            
+    @foreach (DataColumn column in Model.Columns)
+    {
+        <td>@column.ColumnName</td>
+    }
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>                                
+                @foreach(var value in row.ItemArray){
+                <td>@Html.Raw(value)</td>
+                }
+            </tr>
+            
+        }
+    </tbody>
+    </table>
+
+<script>
+    $(document).ready( function () {
+    $('#IndexTable').DataTable();
+} );
+</script>

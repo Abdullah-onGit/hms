@@ -1,0 +1,114 @@
+@model UserMaster
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      
+      <style>
+          .container
+          {
+              display:flex;
+/*              flex: column;*/
+             flex: column;
+              vertical-align: center;
+              
+              align-content: center;
+              align-items: center;
+              align-self: center;   
+              justify-content: center;
+              margin : 40px;
+              
+              
+          }
+          .container1
+          {
+              display:flex;
+/*              flex: column;*/
+             flex: column;
+              vertical-align: center;
+              
+              align-content: center;
+              align-items: center;
+              align-self: center;   
+              justify-content: center;
+              margin : 20px;
+              
+              
+          }
+           .header
+          {   margin-top: 0px;
+              padding-top: 0px;
+              display:flex;
+              flex: column;
+              align-content: center;
+              align-items: center;
+              align-self: center;   
+              justify-content: center;
+            margin: 20px; 
+              padding-bottom: 20px;
+            
+          }
+          
+          .jumbotron{
+              margin-top: 20px;
+              padding-top: 20px;
+              padding-bottom:0px;
+              margin-bottom:0px;
+             
+/*              width:400px;*/
+            
+          }
+      </style>
+
+    
+    </head>
+  <body>
+     
+     <div class="container">
+         <div class="jumbotron my-auto d-flex align-items-center">
+      
+            <div class="container1">
+             
+               
+                <form action="/Account/Login" method="post">
+                     <h3 class="header">LOGIN</h3>
+                        <div class="form-group">
+                        <label for="UserName">Name</label>
+                        <input type="input" class="form-control" id="UserName" name="UserName" required>
+                         </div>
+                        <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <span class="header"><button type="submit" class="btn btn-primary">Login</button></span>
+                    
+                 </form>
+             
+             
+             </div>
+         </div>
+
+         
+         </div>
+         
+      
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+          
+  </body>
+</html>
